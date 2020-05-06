@@ -1,5 +1,5 @@
 #This file can be manually edited using any ASCII editor.
-#File created on 4/05/2020 12:00:00 AM 4/05/2020 6:23:53 PM#
+#File created on 7/05/2020 12:00:00 AM 7/05/2020 12:28:31 AM#
 #
 #IMPORTANT INFO REGARDING the keyboard key AltGr (RAlt as named in DCS) or RMENU as named DCSFP
 #When you press AltGr DCSFP will register RMENU + LCONTROL. This is a bug which "just is". You need to modify that in the profile
@@ -85,7 +85,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\3.png",
               "StreamDeckButtonName": 12,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -93,7 +92,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 12,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "UFC_3",
               "DCSBIOSInputs": {
@@ -168,7 +166,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 12,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -255,7 +252,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\clr.png",
               "StreamDeckButtonName": 13,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -263,7 +259,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 13,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -338,7 +333,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 13,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -417,23 +411,49 @@ BeginPanelJSON
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
             "StreamDeckButtonName": 1,
             "Face": {
-              "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
-              "FaceType": 1,
-              "ConfigurationOK": false,
-              "ButtonTextTemplate": "",
-              "TextFont": "Hornet IFEI, 14.2499981pt",
+              "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
+              "UseFormula": false,
+              "Formula": "",
+              "DCSBIOSOutput": {
+                "$type": "DCS_BIOS.DCSBIOSOutput, DCS-BIOS",
+                "ControlId": "UFC_SCRATCHPAD_STRING_1_DISPLAY",
+                "Address": 29774,
+                "Mask": 0,
+                "Shiftvalue": 0,
+                "DCSBiosOutputType": 0,
+                "DCSBiosOutputComparison": 0,
+                "ControlDescription": "Scratchpad String 1 Display",
+                "MaxValue": 0,
+                "MaxLength": 2,
+                "ControlType": null
+              },
+              "DCSBIOSConverters": {
+                "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
+                "$values": []
+              },
+              "TreatStringAsNumber": false,
+              "RawTextFont": "Hornet IFEI, 35.9999962pt",
+              "RawFontColor": "Lime",
+              "RawBackgroundColor": "Black",
+              "DecoderSourceType": 0,
+              "DecoderOutputType": 0,
+              "FaceType": 4,
+              "ConfigurationOK": true,
+              "ButtonTextTemplate": "{dcsbios}",
+              "TextFont": "Hornet IFEI, 35.9999962pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
+              "UintDcsBiosValue": 4294967295,
+              "StringDcsBiosValue": "",
               "StreamDeckButtonName": 1,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
-              "OffsetX": 28,
-              "OffsetY": 28
+              "OffsetX": -4,
+              "OffsetY": 14
             },
             "ActionForPress": null,
             "ActionForRelease": null,
             "HasConfig": true,
             "ActionType": 0,
-            "FaceType": 1
+            "FaceType": 4
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
@@ -447,7 +467,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\1.png",
               "StreamDeckButtonName": 10,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -455,7 +474,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 10,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -530,7 +548,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 10,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -617,7 +634,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\2.png",
               "StreamDeckButtonName": 11,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -625,7 +641,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 11,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -700,7 +715,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 11,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -787,7 +801,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\4.png",
               "StreamDeckButtonName": 18,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -795,7 +808,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 18,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -870,7 +882,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 18,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -957,7 +968,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\5.png",
               "StreamDeckButtonName": 19,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -965,7 +975,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 19,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1040,7 +1049,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 19,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1127,7 +1135,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\6.png",
               "StreamDeckButtonName": 20,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -1135,7 +1142,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 20,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1210,7 +1216,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 20,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1297,7 +1302,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\7.png",
               "StreamDeckButtonName": 26,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -1305,7 +1309,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 26,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1380,7 +1383,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 26,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1467,7 +1469,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\8.png",
               "StreamDeckButtonName": 27,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -1475,7 +1476,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 27,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1550,7 +1550,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 27,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1637,7 +1636,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\9.png",
               "StreamDeckButtonName": 28,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -1645,7 +1643,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 28,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1720,7 +1717,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 28,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1807,7 +1803,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\ent.png",
               "StreamDeckButtonName": 21,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -1815,7 +1810,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 21,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1890,7 +1884,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 21,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1977,7 +1970,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\0.png",
               "StreamDeckButtonName": 29,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -1985,7 +1977,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 29,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2060,7 +2051,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 29,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2147,7 +2137,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\ap.png",
               "StreamDeckButtonName": 14,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -2155,7 +2144,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 14,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2230,7 +2218,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 14,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2317,7 +2304,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\ils.png",
               "StreamDeckButtonName": 22,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -2325,7 +2311,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 22,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2400,7 +2385,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 22,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2487,7 +2471,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\bcn.png",
               "StreamDeckButtonName": 30,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -2495,7 +2478,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 30,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2570,7 +2552,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 30,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2657,7 +2638,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\iff.png",
               "StreamDeckButtonName": 15,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -2665,7 +2645,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 15,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2740,7 +2719,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 15,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2827,7 +2805,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\dl.png",
               "StreamDeckButtonName": 23,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -2835,7 +2812,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 23,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2910,7 +2886,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 23,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2997,7 +2972,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\onoff.png",
               "StreamDeckButtonName": 31,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -3005,7 +2979,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 31,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3080,7 +3053,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 31,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3167,7 +3139,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\tcn.png",
               "StreamDeckButtonName": 16,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -3175,7 +3146,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 16,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3250,7 +3220,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 16,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3337,7 +3306,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\emcon.png",
               "StreamDeckButtonName": 24,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -3345,7 +3313,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 24,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3420,7 +3387,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 24,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3507,7 +3473,6 @@ BeginPanelJSON
               "BackgroundColor": "White",
               "ImageFile": "C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\ip.png",
               "StreamDeckButtonName": 9,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 0,
               "OffsetY": 0
             },
@@ -3515,7 +3480,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 9,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3590,7 +3554,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 9,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3702,9 +3665,8 @@ BeginPanelJSON
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
-              "StringDcsBiosValue": "GRCV",
+              "StringDcsBiosValue": "",
               "StreamDeckButtonName": 4,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 2,
               "OffsetY": 22
             },
@@ -3712,7 +3674,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 4,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3787,7 +3748,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 4,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3871,13 +3831,13 @@ BeginPanelJSON
               "Formula": "",
               "DCSBIOSOutput": {
                 "$type": "DCS_BIOS.DCSBIOSOutput, DCS-BIOS",
-                "ControlId": "UFC_OPTION_DISPLAY_1",
-                "Address": 29746,
+                "ControlId": "UFC_OPTION_DISPLAY_2",
+                "Address": 29750,
                 "Mask": 0,
                 "Shiftvalue": 0,
                 "DCSBiosOutputType": 0,
                 "DCSBiosOutputComparison": 0,
-                "ControlDescription": "Option Display 1",
+                "ControlDescription": "Option Display 2",
                 "MaxValue": 0,
                 "MaxLength": 4,
                 "ControlType": null
@@ -3899,9 +3859,8 @@ BeginPanelJSON
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
-              "StringDcsBiosValue": "GRCV",
+              "StringDcsBiosValue": "",
               "StreamDeckButtonName": 5,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 2,
               "OffsetY": 22
             },
@@ -3909,7 +3868,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 5,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3984,7 +3942,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 5,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4068,13 +4025,13 @@ BeginPanelJSON
               "Formula": "",
               "DCSBIOSOutput": {
                 "$type": "DCS_BIOS.DCSBIOSOutput, DCS-BIOS",
-                "ControlId": "UFC_OPTION_DISPLAY_1",
-                "Address": 29746,
+                "ControlId": "UFC_OPTION_DISPLAY_3",
+                "Address": 29754,
                 "Mask": 0,
                 "Shiftvalue": 0,
                 "DCSBiosOutputType": 0,
                 "DCSBiosOutputComparison": 0,
-                "ControlDescription": "Option Display 1",
+                "ControlDescription": "Option Display 3",
                 "MaxValue": 0,
                 "MaxLength": 4,
                 "ControlType": null
@@ -4096,9 +4053,8 @@ BeginPanelJSON
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
-              "StringDcsBiosValue": "GRCV",
+              "StringDcsBiosValue": "",
               "StreamDeckButtonName": 6,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 2,
               "OffsetY": 22
             },
@@ -4106,7 +4062,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 6,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4181,7 +4136,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 6,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4265,13 +4219,13 @@ BeginPanelJSON
               "Formula": "",
               "DCSBIOSOutput": {
                 "$type": "DCS_BIOS.DCSBIOSOutput, DCS-BIOS",
-                "ControlId": "UFC_OPTION_DISPLAY_1",
-                "Address": 29746,
+                "ControlId": "UFC_OPTION_DISPLAY_4",
+                "Address": 29758,
                 "Mask": 0,
                 "Shiftvalue": 0,
                 "DCSBiosOutputType": 0,
                 "DCSBiosOutputComparison": 0,
-                "ControlDescription": "Option Display 1",
+                "ControlDescription": "Option Display 4",
                 "MaxValue": 0,
                 "MaxLength": 4,
                 "ControlType": null
@@ -4293,9 +4247,8 @@ BeginPanelJSON
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
-              "StringDcsBiosValue": "GRCV",
+              "StringDcsBiosValue": "",
               "StreamDeckButtonName": 7,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 2,
               "OffsetY": 22
             },
@@ -4303,7 +4256,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 7,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4378,7 +4330,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 7,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4462,13 +4413,13 @@ BeginPanelJSON
               "Formula": "",
               "DCSBIOSOutput": {
                 "$type": "DCS_BIOS.DCSBIOSOutput, DCS-BIOS",
-                "ControlId": "UFC_OPTION_DISPLAY_1",
-                "Address": 29746,
+                "ControlId": "UFC_OPTION_DISPLAY_5",
+                "Address": 29762,
                 "Mask": 0,
                 "Shiftvalue": 0,
                 "DCSBiosOutputType": 0,
                 "DCSBiosOutputComparison": 0,
-                "ControlDescription": "Option Display 1",
+                "ControlDescription": "Option Display 5",
                 "MaxValue": 0,
                 "MaxLength": 4,
                 "ControlType": null
@@ -4490,9 +4441,8 @@ BeginPanelJSON
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
-              "StringDcsBiosValue": "GRCV",
+              "StringDcsBiosValue": "",
               "StreamDeckButtonName": 8,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 2,
               "OffsetY": 22
             },
@@ -4500,7 +4450,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 8,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4575,7 +4524,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 8,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4684,7 +4632,6 @@ BeginPanelJSON
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 18,
                       "OffsetY": 14
                     },
@@ -4697,7 +4644,6 @@ BeginPanelJSON
                       "BackgroundColor": "White",
                       "ImageFile": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -4713,7 +4659,6 @@ BeginPanelJSON
                       "UintDcsBiosValue": 0,
                       "StringDcsBiosValue": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -4734,7 +4679,6 @@ BeginPanelJSON
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 6,
                       "OffsetY": 14
                     },
@@ -4747,7 +4691,6 @@ BeginPanelJSON
                       "BackgroundColor": "White",
                       "ImageFile": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -4763,7 +4706,6 @@ BeginPanelJSON
                       "UintDcsBiosValue": 0,
                       "StringDcsBiosValue": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -4784,7 +4726,6 @@ BeginPanelJSON
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 18,
                       "OffsetY": 14
                     },
@@ -4797,7 +4738,6 @@ BeginPanelJSON
                       "BackgroundColor": "White",
                       "ImageFile": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -4813,7 +4753,6 @@ BeginPanelJSON
                       "UintDcsBiosValue": 0,
                       "StringDcsBiosValue": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -4834,7 +4773,6 @@ BeginPanelJSON
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 18,
                       "OffsetY": 14
                     },
@@ -4847,7 +4785,6 @@ BeginPanelJSON
                       "BackgroundColor": "White",
                       "ImageFile": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -4863,7 +4800,6 @@ BeginPanelJSON
                       "UintDcsBiosValue": 0,
                       "StringDcsBiosValue": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -4884,7 +4820,6 @@ BeginPanelJSON
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 18,
                       "OffsetY": 14
                     },
@@ -4897,7 +4832,6 @@ BeginPanelJSON
                       "BackgroundColor": "Black",
                       "ImageFile": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -4913,7 +4847,6 @@ BeginPanelJSON
                       "UintDcsBiosValue": 0,
                       "StringDcsBiosValue": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -4937,10 +4870,9 @@ BeginPanelJSON
               "TextFont": "Hornet IFEI, 35.9999962pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
-              "UintDcsBiosValue": 13,
+              "UintDcsBiosValue": 2,
               "StringDcsBiosValue": "",
               "StreamDeckButtonName": 25,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 6,
               "OffsetY": 16
             },
@@ -4948,7 +4880,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 25,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -5023,7 +4954,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 25,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -5132,7 +5062,6 @@ BeginPanelJSON
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 18,
                       "OffsetY": 14
                     },
@@ -5145,7 +5074,6 @@ BeginPanelJSON
                       "BackgroundColor": "White",
                       "ImageFile": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -5161,7 +5089,6 @@ BeginPanelJSON
                       "UintDcsBiosValue": 0,
                       "StringDcsBiosValue": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -5182,7 +5109,6 @@ BeginPanelJSON
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 6,
                       "OffsetY": 14
                     },
@@ -5195,7 +5121,6 @@ BeginPanelJSON
                       "BackgroundColor": "White",
                       "ImageFile": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -5211,7 +5136,6 @@ BeginPanelJSON
                       "UintDcsBiosValue": 0,
                       "StringDcsBiosValue": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -5232,7 +5156,6 @@ BeginPanelJSON
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 18,
                       "OffsetY": 14
                     },
@@ -5245,7 +5168,6 @@ BeginPanelJSON
                       "BackgroundColor": "White",
                       "ImageFile": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -5261,7 +5183,6 @@ BeginPanelJSON
                       "UintDcsBiosValue": 0,
                       "StringDcsBiosValue": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -5282,7 +5203,6 @@ BeginPanelJSON
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 18,
                       "OffsetY": 14
                     },
@@ -5295,7 +5215,6 @@ BeginPanelJSON
                       "BackgroundColor": "White",
                       "ImageFile": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -5311,7 +5230,6 @@ BeginPanelJSON
                       "UintDcsBiosValue": 0,
                       "StringDcsBiosValue": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -5332,7 +5250,6 @@ BeginPanelJSON
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 18,
                       "OffsetY": 14
                     },
@@ -5345,7 +5262,6 @@ BeginPanelJSON
                       "BackgroundColor": "Black",
                       "ImageFile": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -5361,7 +5277,6 @@ BeginPanelJSON
                       "UintDcsBiosValue": 0,
                       "StringDcsBiosValue": "",
                       "StreamDeckButtonName": 0,
-                      "StreamDeckInstanceId": null,
                       "OffsetX": 0,
                       "OffsetY": 0
                     },
@@ -5385,10 +5300,9 @@ BeginPanelJSON
               "TextFont": "Hornet IFEI, 35.9999962pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
-              "UintDcsBiosValue": 19,
+              "UintDcsBiosValue": 1,
               "StringDcsBiosValue": "",
               "StreamDeckButtonName": 32,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "OffsetX": 6,
               "OffsetY": 16
             },
@@ -5396,7 +5310,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 32,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -5471,7 +5384,6 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 32,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -5550,121 +5462,100 @@ BeginPanelJSON
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
             "StreamDeckButtonName": 2,
             "Face": {
-              "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
-              "FaceType": 1,
-              "ConfigurationOK": false,
-              "ButtonTextTemplate": "",
-              "TextFont": "Hornet IFEI, 14.2499981pt",
+              "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
+              "UseFormula": false,
+              "Formula": "",
+              "DCSBIOSOutput": {
+                "$type": "DCS_BIOS.DCSBIOSOutput, DCS-BIOS",
+                "ControlId": "UFC_SCRATCHPAD_STRING_2_DISPLAY",
+                "Address": 29776,
+                "Mask": 0,
+                "Shiftvalue": 0,
+                "DCSBiosOutputType": 0,
+                "DCSBiosOutputComparison": 0,
+                "ControlDescription": "Scratchpad String 2 Display",
+                "MaxValue": 0,
+                "MaxLength": 2,
+                "ControlType": null
+              },
+              "DCSBIOSConverters": {
+                "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
+                "$values": []
+              },
+              "TreatStringAsNumber": false,
+              "RawTextFont": "Hornet IFEI, 35.9999962pt",
+              "RawFontColor": "Lime",
+              "RawBackgroundColor": "Black",
+              "DecoderSourceType": 0,
+              "DecoderOutputType": 0,
+              "FaceType": 4,
+              "ConfigurationOK": true,
+              "ButtonTextTemplate": "{dcsbios}",
+              "TextFont": "Hornet IFEI, 35.9999962pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
+              "UintDcsBiosValue": 4294967295,
+              "StringDcsBiosValue": "",
               "StreamDeckButtonName": 2,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
-              "OffsetX": 30,
-              "OffsetY": 28
+              "OffsetX": 6,
+              "OffsetY": 14
             },
             "ActionForPress": null,
             "ActionForRelease": null,
             "HasConfig": true,
             "ActionType": 0,
-            "FaceType": 1
+            "FaceType": 4
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
             "StreamDeckButtonName": 3,
             "Face": {
-              "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
-              "FaceType": 1,
-              "ConfigurationOK": false,
-              "ButtonTextTemplate": "",
+              "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
+              "UseFormula": false,
+              "Formula": "",
+              "DCSBIOSOutput": {
+                "$type": "DCS_BIOS.DCSBIOSOutput, DCS-BIOS",
+                "ControlId": "UFC_SCRATCHPAD_NUMBER_DISPLAY",
+                "Address": 29766,
+                "Mask": 0,
+                "Shiftvalue": 0,
+                "DCSBiosOutputType": 0,
+                "DCSBiosOutputComparison": 0,
+                "ControlDescription": "Scratchpad Number Display",
+                "MaxValue": 0,
+                "MaxLength": 8,
+                "ControlType": null
+              },
+              "DCSBIOSConverters": {
+                "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
+                "$values": []
+              },
+              "TreatStringAsNumber": false,
+              "RawTextFont": "Hornet IFEI, 14.2499981pt",
+              "RawFontColor": "Lime",
+              "RawBackgroundColor": "Black",
+              "DecoderSourceType": 0,
+              "DecoderOutputType": 0,
+              "FaceType": 4,
+              "ConfigurationOK": true,
+              "ButtonTextTemplate": "{dcsbios}",
               "TextFont": "Hornet IFEI, 14.2499981pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
+              "UintDcsBiosValue": 4294967295,
+              "StringDcsBiosValue": "",
               "StreamDeckButtonName": 3,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
-              "OffsetX": 2,
-              "OffsetY": 28
+              "OffsetX": -6,
+              "OffsetY": 26
             },
             "ActionForPress": null,
             "ActionForRelease": null,
             "HasConfig": true,
             "ActionType": 0,
-            "FaceType": 1
-          },
-          {
-            "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
-            "StreamDeckButtonName": 17,
-            "Face": {
-              "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
-              "FaceType": 1,
-              "ConfigurationOK": true,
-              "ButtonTextTemplate": "Extras",
-              "TextFont": "Hornet IFEI, 35.9999962pt",
-              "FontColor": "240, 233, 238",
-              "BackgroundColor": "70, 85, 79",
-              "StreamDeckButtonName": 17,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
-              "OffsetX": 14,
-              "OffsetY": 14
-            },
-            "ActionForPress": {
-              "$type": "NonVisuals.StreamDeck.ActionTypeLayer, NonVisuals",
-              "NavigationType": 0,
-              "TargetLayer": "Extras",
-              "ActionType": 16,
-              "Description": "Layer Navigation",
-              "StreamDeckButtonName": 17,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}"
-            },
-            "ActionForRelease": null,
-            "HasConfig": true,
-            "ActionType": 16,
-            "FaceType": 1
+            "FaceType": 4
           }
         ]
-      },
-      "IsVisible": true,
-      "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}"
-    },
-    {
-      "$type": "NonVisuals.StreamDeck.StreamDeckLayer, NonVisuals",
-      "Name": "Extras",
-      "StreamDeckButtons": {
-        "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.StreamDeckButton, NonVisuals]], mscorlib",
-        "$values": [
-          {
-            "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
-            "StreamDeckButtonName": 1,
-            "Face": {
-              "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
-              "FaceType": 2,
-              "ConfigurationOK": true,
-              "TextFont": "Hornet IFEI, 35.9999962pt",
-              "FontColor": "Black",
-              "BackgroundColor": "Black",
-              "ImageFile": "D:\\DCS Tools\\DCSFlightpanels_x64_4.0.39_alpha\\\\StreamDeckGallery\\Symbols\\home_white.png",
-              "StreamDeckButtonName": 1,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}",
-              "OffsetX": 0,
-              "OffsetY": 0
-            },
-            "ActionForPress": {
-              "$type": "NonVisuals.StreamDeck.ActionTypeLayer, NonVisuals",
-              "NavigationType": 2,
-              "TargetLayer": "Go to Home",
-              "ActionType": 16,
-              "Description": "Layer Navigation",
-              "StreamDeckButtonName": 1,
-              "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}"
-            },
-            "ActionForRelease": null,
-            "HasConfig": true,
-            "ActionType": 16,
-            "FaceType": 2
-          }
-        ]
-      },
-      "IsVisible": true,
-      "StreamDeckInstanceId": "\\\\?\\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}"
+      }
     }
   ]
 }
