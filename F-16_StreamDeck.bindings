@@ -1,5 +1,5 @@
 #This file can be manually edited using any ASCII editor.
-#File created on 6/05/2020 12:00:00 AM 6/05/2020 5:04:29 PM#
+#File created on 7/05/2020 12:00:00 AM 7/05/2020 12:58:45 AM#
 #
 #IMPORTANT INFO REGARDING the keyboard key AltGr (RAlt as named in DCS) or RMENU as named DCSFP
 #When you press AltGr DCSFP will register RMENU + LCONTROL. This is a bug which "just is". You need to modify that in the profile
@@ -4226,7 +4226,7 @@ BeginPanelJSON
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
-              "UintDcsBiosValue": 0,
+              "UintDcsBiosValue": 1,
               "StringDcsBiosValue": "",
               "StreamDeckButtonName": 9,
               "OffsetX": 0,
@@ -4785,9 +4785,9 @@ BeginPanelJSON
               "DCSBIOSOutput": {
                 "$type": "DCS_BIOS.DCSBIOSOutput, DCS-BIOS",
                 "ControlId": "ICP_FLIR_GAIN_SW",
-                "Address": 17446,
-                "Mask": 24576,
-                "Shiftvalue": 13,
+                "Address": 17448,
+                "Mask": 12288,
+                "Shiftvalue": 12,
                 "DCSBiosOutputType": 1,
                 "DCSBiosOutputComparison": 0,
                 "ControlDescription": "ICP FLIR GAIN/LEVEL Switch, GAIN/LVL/AUTO",
@@ -4888,7 +4888,7 @@ BeginPanelJSON
                     },
                     "ConverterOutputType": 2,
                     "Comparator1": 0,
-                    "ReferenceValue1": 8192.0,
+                    "ReferenceValue1": 1.0,
                     "Comparator2": 10,
                     "ReferenceValue2": 0.0
                   },
@@ -4935,7 +4935,7 @@ BeginPanelJSON
                     },
                     "ConverterOutputType": 2,
                     "Comparator1": 0,
-                    "ReferenceValue1": 16384.0,
+                    "ReferenceValue1": 2.0,
                     "Comparator2": 10,
                     "ReferenceValue2": 0.0
                   }
@@ -4953,7 +4953,7 @@ BeginPanelJSON
               "TextFont": "MS Gothic, 18pt, style=Bold",
               "FontColor": "White",
               "BackgroundColor": "57, 62, 57",
-              "UintDcsBiosValue": 0,
+              "UintDcsBiosValue": 2,
               "StringDcsBiosValue": "",
               "StreamDeckButtonName": 27,
               "OffsetX": 6,
@@ -4962,7 +4962,7 @@ BeginPanelJSON
             "ActionForPress": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
-              "StreamDeckButtonName": 9,
+              "StreamDeckButtonName": 27,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
