@@ -77,7 +77,7 @@ BeginPanelJSON
     {
       "$type": "NonVisuals.StreamDeck.StreamDeckLayer, NonVisuals",
       "Name": "Home",
-      "LayerStreamDeckButtons": {
+      "StreamDeckButtons": {
         "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.StreamDeckButton, NonVisuals]], mscorlib",
         "$values": [
           {
@@ -4364,7 +4364,7 @@ BeginPanelJSON
     {
       "$type": "NonVisuals.StreamDeck.StreamDeckLayer, NonVisuals",
       "Name": "FLIR",
-      "LayerStreamDeckButtons": {
+      "StreamDeckButtons": {
         "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.StreamDeckButton, NonVisuals]], mscorlib",
         "$values": [
           {
@@ -5656,7 +5656,7 @@ BeginPanelJSON
     {
       "$type": "NonVisuals.StreamDeck.StreamDeckLayer, NonVisuals",
       "Name": "SYM BRT",
-      "LayerStreamDeckButtons": {
+      "StreamDeckButtons": {
         "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.StreamDeckButton, NonVisuals]], mscorlib",
         "$values": [
           {
@@ -6305,4 +6305,3 @@ EndPanelJSON
 #	PA1
 #	OEM_CLEAR
 #	VK_NULL
-
