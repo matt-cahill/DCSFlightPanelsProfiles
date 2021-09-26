@@ -6,16 +6,24 @@
 #by deleting the + LCONTROL part.
 #So for example AltGr + HOME pressed on the keyboard becomes RMENU + LCONTROL + HOME
 #Open text editor and delete the LCONTROL ==> RMENU + HOME
+#Supported panels :
+#   PZ55SwitchPanel
+#   PZ69RadioPanel
+#   PZ70MultiPanel
+#   BackLitPanel
+#   StreamDeckMini
+#   StreamDeck
+#   StreamDeckXL
 
 #  ***Do not change the location nor content of the line below***
-Airframe=F16C
-OperationLevelFlag=3
+Profile=17
+EmulationModesFlag=3
 UseGenericRadio=False
 
 
 PanelType=PZ55SwitchPanel
 PanelInstanceID=\\?\hid#vid_06a3&pid_0d67#8&3105af1b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
-PanelSettingsVersion=0X
+BindingHash=380eb1cad16e8fae44dfb6876458d9fb
 BeginPanel
 	SwitchPanelDCSBIOSControl{1LEVER_GEAR_DOWN|DCS-BIOS}\o/\o/DCSBIOSInput{GEAR_HANDLE|SET_STATE|0|0}
 	SwitchPanelDCSBIOSControl{1LEVER_GEAR_UP|DCS-BIOS}\o/\o/DCSBIOSInput{GEAR_HANDLE|SET_STATE|1|0}
@@ -38,7 +46,7 @@ EndPanel
 
 PanelType=PZ69RadioPanel
 PanelInstanceID=\\?\hid#vid_06a3&pid_0d05#8&d27cb0c&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
-PanelSettingsVersion=0X
+BindingHash=2a0eb6eed0935331b72c06e4f4095b50
 BeginPanel
 	RadioPanelDCSBIOSControl{UpperNAV1}\o/{1UpperLargeFreqWheelInc|DCS-BIOS}\o/\o/DCSBIOSInput{EHSI_HDG_SET_KNB|VARIABLE_STEP|5000|0}
 	RadioPanelDCSBIOSControl{UpperNAV1}\o/{1UpperLargeFreqWheelDec|DCS-BIOS}\o/\o/DCSBIOSInput{EHSI_HDG_SET_KNB|VARIABLE_STEP|-5000|0}
@@ -57,7 +65,7 @@ EndPanel
 
 PanelType=PZ70MultiPanel
 PanelInstanceID=\\?\hid#vid_06a3&pid_0d06#8&11e17154&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
-PanelSettingsVersion=2X
+BindingHash=4e275cfe6d8623ae10838f711b4d995f
 BeginPanel
 	MultiPanelDCSBIOSControl{HDG}\o/{1LCD_WHEEL_INC|HDG+}\o/\o/DCSBIOSInput{EHSI_HDG_SET_KNB|VARIABLE_STEP|1500|0}
 	MultiPanelDCSBIOSControl{HDG}\o/{1LCD_WHEEL_DEC|HDG-}\o/\o/DCSBIOSInput{EHSI_HDG_SET_KNB|VARIABLE_STEP|-1500|0}
@@ -245,4 +253,3 @@ EndPanel
 #	PA1
 #	OEM_CLEAR
 #	VK_NULL
-
