@@ -1,68 +1,28 @@
 #This file can be manually edited using any ASCII editor.
-#File created on 7/05/2020 12:00:00 AM 7/05/2020 12:28:31 AM#
+#File created on 26/09/2021 00:00:00 26/09/2021 17:46:22#
 #
 #IMPORTANT INFO REGARDING the keyboard key AltGr (RAlt as named in DCS) or RMENU as named DCSFP
 #When you press AltGr DCSFP will register RMENU + LCONTROL. This is a bug which "just is". You need to modify that in the profile
 #by deleting the + LCONTROL part.
 #So for example AltGr + HOME pressed on the keyboard becomes RMENU + LCONTROL + HOME
 #Open text editor and delete the LCONTROL ==> RMENU + HOME
+#Supported panels :
+#   PZ55SwitchPanel
+#   PZ69RadioPanel
+#   PZ70MultiPanel
+#   BackLitPanel
+#   StreamDeckMini
+#   StreamDeck
+#   StreamDeckXL
 
 #  ***Do not change the location nor content of the line below***
-Airframe=FA18C
-OperationLevelFlag=3
+Profile=20
+EmulationModesFlag=3
 UseGenericRadio=False
-
-
-PanelType=PZ55SwitchPanel
-PanelInstanceID=\\?\hid#vid_06a3&pid_0d67#8&3105af1b&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
-PanelSettingsVersion=0X
-BeginPanel
-	SwitchPanelDCSBIOSControl{1LEVER_GEAR_DOWN|Gear Down}\o/\o/DCSBIOSInput{GEAR_LEVER|SET_STATE|0|0}
-	SwitchPanelDCSBIOSControl{1LEVER_GEAR_UP|Gear Up}\o/\o/DCSBIOSInput{GEAR_LEVER|SET_STATE|1|0}
-	SwitchPanelDCSBIOSControl{1SWITCHKEY_MASTER_BAT|Master Arm}\o/\o/DCSBIOSInput{MASTER_ARM_SW|SET_STATE|1|0}
-	SwitchPanelDCSBIOSControl{0SWITCHKEY_MASTER_BAT|Master Arm Safe}\o/\o/DCSBIOSInput{MASTER_ARM_SW|SET_STATE|0|0}
-	SwitchPanelDCSBIOSControl{1KNOB_ENGINE_OFF|L FUS MSL}\o/\o/DCSBIOSInput{SEL_JETT_KNOB|SET_STATE|0|0}
-	SwitchPanelDCSBIOSControl{1KNOB_ENGINE_RIGHT|SAFE}\o/\o/DCSBIOSInput{SEL_JETT_KNOB|SET_STATE|1|0}
-	SwitchPanelDCSBIOSControl{1KNOB_ENGINE_LEFT|R FUS MSL}\o/\o/DCSBIOSInput{SEL_JETT_KNOB|SET_STATE|2|0}
-	SwitchPanelDCSBIOSControl{1KNOB_ENGINE_BOTH|RACK/LCHR}\o/\o/DCSBIOSInput{SEL_JETT_KNOB|SET_STATE|3|0}
-	SwitchPanelDCSBIOSControl{1KNOB_ENGINE_START|STORES}\o/\o/DCSBIOSInput{SEL_JETT_KNOB|SET_STATE|4|0}
-	SwitchPanelDCSBIOSControl{1SWITCHKEY_PITOT_HEAT|Baro}\o/\o/DCSBIOSInput{HUD_ALT_SW|SET_STATE|1|0}
-	SwitchPanelDCSBIOSControl{0SWITCHKEY_PITOT_HEAT|Radar}\o/\o/DCSBIOSInput{HUD_ALT_SW|SET_STATE|0|0}
-	SwitchPanelDCSBIOSControl{1SWITCHKEY_DE_ICE|HUD Day}\o/\o/DCSBIOSInput{HUD_SYM_BRT_SELECT|SET_STATE|1|0}
-	SwitchPanelDCSBIOSControl{0SWITCHKEY_DE_ICE|HUD Night}\o/\o/DCSBIOSInput{HUD_SYM_BRT_SELECT|SET_STATE|0|0}
-	SwitchPanelDCSBIOSControl{1SWITCHKEY_FUEL_PUMP|Anti Skid On}\o/\o/DCSBIOSInput{ANTI_SKID_SW|SET_STATE|1|0}
-	SwitchPanelDCSBIOSControl{0SWITCHKEY_FUEL_PUMP|Anti Skid Off}\o/\o/DCSBIOSInput{ANTI_SKID_SW|SET_STATE|0|0}
-	SwitchPanelDCSBIOSControl{1SWITCHKEY_AVIONICS_MASTER|Hook Bypass Field}\o/\o/DCSBIOSInput{HOOK_BYPASS_SW|SET_STATE|1|0}
-	SwitchPanelDCSBIOSControl{0SWITCHKEY_AVIONICS_MASTER|Hook Bypass Carrier}\o/\o/DCSBIOSInput{HOOK_BYPASS_SW|SET_STATE|0|0}
-	SwitchPanelDCSBIOSControl{1SWITCHKEY_MASTER_ALT|Hook Up}\o/\o/DCSBIOSInput{HOOK_LEVER|SET_STATE|1|0}
-	SwitchPanelDCSBIOSControl{0SWITCHKEY_MASTER_ALT|Hook Down}\o/\o/DCSBIOSInput{HOOK_LEVER|SET_STATE|0|0}
-	SwitchPanelLedUp{DARK|DCSBiosOutput{FLP_LG_NOSE_GEAR_LT|Equals|0}}
-	SwitchPanelLedUp{RED|DCSBiosOutput{LANDING_GEAR_HANDLE_LT|Equals|1}}
-	SwitchPanelLedUp{GREEN|DCSBiosOutput{FLP_LG_NOSE_GEAR_LT|Equals|1}}
-	SwitchPanelLedLeft{DARK|DCSBiosOutput{FLP_LG_LEFT_GEAR_LT|Equals|0}}
-	SwitchPanelLedLeft{RED|DCSBiosOutput{LANDING_GEAR_HANDLE_LT|Equals|1}}
-	SwitchPanelLedLeft{GREEN|DCSBiosOutput{FLP_LG_LEFT_GEAR_LT|Equals|1}}
-	SwitchPanelLedRight{DARK|DCSBiosOutput{FLP_LG_RIGHT_GEAR_LT|Equals|0}}
-	SwitchPanelLedRight{RED|DCSBiosOutput{LANDING_GEAR_HANDLE_LT|Equals|1}}
-	SwitchPanelLedRight{GREEN|DCSBiosOutput{FLP_LG_RIGHT_GEAR_LT|Equals|1}}
-	ManualLandingGearLEDs{False}
-EndPanel
-
-
-PanelType=PZ70MultiPanel
-PanelInstanceID=\\?\hid#vid_06a3&pid_0d06#8&11e17154&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
-PanelSettingsVersion=2X
-BeginPanel
-	MultiPanelDCSBIOSControl{ALT}\o/{1PITCH_TRIM_WHEEL_UP|RadAlt Up}\o/\o/DCSBIOSInput{RADALT_HEIGHT|VARIABLE_STEP|1000|0}
-	MultiPanelDCSBIOSControl{ALT}\o/{1PITCH_TRIM_WHEEL_DOWN|RadAlt Down}\o/\o/DCSBIOSInput{RADALT_HEIGHT|VARIABLE_STEP|-1000|0}
-	MultiPanelDCSBIOSControl{IAS}\o/{0AUTO_THROTTLE|Wing Fold Pull In}\o/\o/DCSBIOSInput{WING_FOLD_PULL|SET_STATE|0|0}
-	MultiPanelDCSBIOSControl{IAS}\o/{1AUTO_THROTTLE|Wing Fold Pull Out}\o/\o/DCSBIOSInput{WING_FOLD_PULL|SET_STATE|1|0}
-EndPanel
-
 
 PanelType=StreamDeck
 PanelInstanceID=\\?\hid#vid_0fd9&pid_006c#6&27db50b8&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
-PanelSettingsVersion=2X
+BindingHash=7854dcb34eeeb1bc0c2a16b13769640b
 BeginPanelJSON
 {
   "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.StreamDeckLayer, NonVisuals]], mscorlib",
@@ -75,11 +35,11 @@ BeginPanelJSON
         "$values": [
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : UFC_3 ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\3.png ",
             "StreamDeckButtonName": 12,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -92,6 +52,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 12,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "UFC_3",
               "DCSBIOSInputs": {
@@ -154,18 +117,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_3",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 3",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 12,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -228,12 +194,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_3",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 3",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -242,11 +208,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\clr.png ",
             "StreamDeckButtonName": 13,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -259,6 +225,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 13,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -321,18 +290,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_CLR",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Keyboard Pushbutton, CLR",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 13,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -395,12 +367,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_CLR",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Keyboard Pushbutton, CLR",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -409,6 +381,7 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "Face DCS-BIOS Decoder UFC_SCRATCHPAD_STRING_1_DISPLAY ",
             "StreamDeckButtonName": 1,
             "Face": {
               "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
@@ -427,20 +400,23 @@ BeginPanelJSON
                 "MaxLength": 2,
                 "ControlType": null
               },
+              "ImageFiles": {
+                "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                "$values": []
+              },
               "DCSBIOSConverters": {
                 "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
                 "$values": []
               },
               "TreatStringAsNumber": false,
-              "RawTextFont": "Hornet IFEI, 35.9999962pt",
+              "RawTextFont": "Microsoft Sans Serif, 35.9999962pt",
               "RawFontColor": "Lime",
               "RawBackgroundColor": "Black",
               "DecoderSourceType": 0,
               "DecoderOutputType": 0,
               "FaceType": 4,
-              "ConfigurationOK": true,
               "ButtonTextTemplate": "{dcsbios}",
-              "TextFont": "Hornet IFEI, 35.9999962pt",
+              "TextFont": "Microsoft Sans Serif, 35.9999962pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
@@ -457,11 +433,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\1.png ",
             "StreamDeckButtonName": 10,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -474,6 +450,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 10,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -536,18 +515,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_1",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 1",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 10,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -610,12 +592,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_1",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 1",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -624,11 +606,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\2.png ",
             "StreamDeckButtonName": 11,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -641,6 +623,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 11,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -703,18 +688,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_2",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 2",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 11,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -777,12 +765,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_2",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 2",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -791,11 +779,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\4.png ",
             "StreamDeckButtonName": 18,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -808,6 +796,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 18,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -870,18 +861,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_4",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 4",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 18,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -944,12 +938,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_4",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 4",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -958,11 +952,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\5.png ",
             "StreamDeckButtonName": 19,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -975,6 +969,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 19,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1037,18 +1034,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_5",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 5",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 19,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1111,12 +1111,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_5",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 5",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -1125,11 +1125,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\6.png ",
             "StreamDeckButtonName": 20,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -1142,6 +1142,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 20,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1204,18 +1207,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_6",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 6",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 20,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1278,12 +1284,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_6",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 6",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -1292,11 +1298,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\7.png ",
             "StreamDeckButtonName": 26,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -1309,6 +1315,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 26,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1371,18 +1380,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_7",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 7",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 26,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1445,12 +1457,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_7",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 7",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -1459,11 +1471,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\8.png ",
             "StreamDeckButtonName": 27,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -1476,6 +1488,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 27,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1538,18 +1553,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_8",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 8",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 27,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1612,12 +1630,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_8",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 8",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -1626,11 +1644,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\9.png ",
             "StreamDeckButtonName": 28,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -1643,6 +1661,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 28,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1705,18 +1726,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_9",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 9",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 28,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1779,12 +1803,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_9",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 9",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -1793,11 +1817,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\ent.png ",
             "StreamDeckButtonName": 21,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -1810,6 +1834,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 21,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1872,18 +1899,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_ENT",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Keyboard Pushbutton, ENT",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 21,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -1946,12 +1976,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_ENT",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Keyboard Pushbutton, ENT",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -1960,11 +1990,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\0.png ",
             "StreamDeckButtonName": 29,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -1977,6 +2007,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 29,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2039,18 +2072,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_0",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 0",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 29,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2113,12 +2149,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_0",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "UFC Keyboard Pushbutton, 0",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -2127,11 +2163,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\ap.png ",
             "StreamDeckButtonName": 14,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -2144,6 +2180,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 14,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2206,18 +2245,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_AP",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, A/P",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 14,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2280,12 +2322,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_AP",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, A/P",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -2294,11 +2336,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\ils.png ",
             "StreamDeckButtonName": 22,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -2311,6 +2353,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 22,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2373,18 +2418,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_ILS",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, ILS",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 22,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2447,12 +2495,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_ILS",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, ILS",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -2461,11 +2509,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\bcn.png ",
             "StreamDeckButtonName": 30,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -2478,6 +2526,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 30,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2540,18 +2591,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_BCN",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, BCN",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 30,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2614,12 +2668,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_BCN",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, BCN",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -2628,11 +2682,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\iff.png ",
             "StreamDeckButtonName": 15,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -2645,6 +2699,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 15,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2707,18 +2764,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_IFF",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, IFF",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 15,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2781,12 +2841,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_IFF",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, IFF",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -2795,11 +2855,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\dl.png ",
             "StreamDeckButtonName": 23,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -2812,6 +2872,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 23,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2874,18 +2937,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_DL",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, D/L",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 23,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -2948,12 +3014,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_DL",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, D/L",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -2962,11 +3028,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\onoff.png ",
             "StreamDeckButtonName": 31,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -2979,6 +3045,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 31,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3041,18 +3110,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_ONOFF",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, ON/OFF",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 31,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3115,12 +3187,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_ONOFF",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, ON/OFF",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -3129,11 +3201,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\tcn.png ",
             "StreamDeckButtonName": 16,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -3146,6 +3218,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 16,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3208,18 +3283,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_TCN",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, TCN",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 16,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3282,12 +3360,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_TCN",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Function Selector Pushbutton, TCN",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -3296,11 +3374,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\emcon.png ",
             "StreamDeckButtonName": 24,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -3313,6 +3391,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 24,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3375,18 +3456,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_EMCON",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Emission Control Pushbutton",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 24,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3449,12 +3533,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_EMCON",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Emission Control Pushbutton",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -3463,11 +3547,11 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face Image C:\\Users\\cahil\\OneDrive\\Documents\\Git\\dcs\\f18\\ufc\\ip.png ",
             "StreamDeckButtonName": 9,
             "Face": {
               "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
               "FaceType": 2,
-              "ConfigurationOK": true,
               "TextFont": "Consolas, 12pt",
               "FontColor": "Black",
               "BackgroundColor": "White",
@@ -3480,6 +3564,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 9,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3542,18 +3629,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_IP",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "I/P Pushbutton",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 9,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3616,12 +3706,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_IP",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "I/P Pushbutton",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -3630,6 +3720,7 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face DCS-BIOS Decoder UFC_OPTION_DISPLAY_1 ",
             "StreamDeckButtonName": 4,
             "Face": {
               "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
@@ -3648,20 +3739,23 @@ BeginPanelJSON
                 "MaxLength": 4,
                 "ControlType": null
               },
+              "ImageFiles": {
+                "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                "$values": []
+              },
               "DCSBIOSConverters": {
                 "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
                 "$values": []
               },
               "TreatStringAsNumber": false,
-              "RawTextFont": "Hornet IFEI, 24pt",
+              "RawTextFont": "Microsoft Sans Serif, 24pt",
               "RawFontColor": "Lime",
               "RawBackgroundColor": "Black",
               "DecoderSourceType": 0,
               "DecoderOutputType": 0,
               "FaceType": 4,
-              "ConfigurationOK": true,
               "ButtonTextTemplate": "{dcsbios}",
-              "TextFont": "Hornet IFEI, 24pt",
+              "TextFont": "Microsoft Sans Serif, 24pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
@@ -3674,6 +3768,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 4,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3736,18 +3833,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_OS1",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Option Select Pushbutton 1",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 4,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3810,12 +3910,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_OS1",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Option Select Pushbutton 1",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -3824,6 +3924,7 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face DCS-BIOS Decoder UFC_OPTION_DISPLAY_2 ",
             "StreamDeckButtonName": 5,
             "Face": {
               "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
@@ -3842,20 +3943,23 @@ BeginPanelJSON
                 "MaxLength": 4,
                 "ControlType": null
               },
+              "ImageFiles": {
+                "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                "$values": []
+              },
               "DCSBIOSConverters": {
                 "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
                 "$values": []
               },
               "TreatStringAsNumber": false,
-              "RawTextFont": "Hornet IFEI, 24pt",
+              "RawTextFont": "Microsoft Sans Serif, 24pt",
               "RawFontColor": "Lime",
               "RawBackgroundColor": "Black",
               "DecoderSourceType": 0,
               "DecoderOutputType": 0,
               "FaceType": 4,
-              "ConfigurationOK": true,
               "ButtonTextTemplate": "{dcsbios}",
-              "TextFont": "Hornet IFEI, 24pt",
+              "TextFont": "Microsoft Sans Serif, 24pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
@@ -3868,6 +3972,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 5,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -3930,18 +4037,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_OS2",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Option Select Pushbutton 2",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 5,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4004,12 +4114,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_OS2",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Option Select Pushbutton 2",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -4018,6 +4128,7 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face DCS-BIOS Decoder UFC_OPTION_DISPLAY_3 ",
             "StreamDeckButtonName": 6,
             "Face": {
               "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
@@ -4036,20 +4147,23 @@ BeginPanelJSON
                 "MaxLength": 4,
                 "ControlType": null
               },
+              "ImageFiles": {
+                "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                "$values": []
+              },
               "DCSBIOSConverters": {
                 "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
                 "$values": []
               },
               "TreatStringAsNumber": false,
-              "RawTextFont": "Hornet IFEI, 24pt",
+              "RawTextFont": "Microsoft Sans Serif, 24pt",
               "RawFontColor": "Lime",
               "RawBackgroundColor": "Black",
               "DecoderSourceType": 0,
               "DecoderOutputType": 0,
               "FaceType": 4,
-              "ConfigurationOK": true,
               "ButtonTextTemplate": "{dcsbios}",
-              "TextFont": "Hornet IFEI, 24pt",
+              "TextFont": "Microsoft Sans Serif, 24pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
@@ -4062,6 +4176,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 6,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4124,18 +4241,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_OS3",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Option Select Pushbutton 3",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 6,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4198,12 +4318,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_OS3",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Option Select Pushbutton 3",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -4212,6 +4332,7 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face DCS-BIOS Decoder UFC_OPTION_DISPLAY_4 ",
             "StreamDeckButtonName": 7,
             "Face": {
               "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
@@ -4230,20 +4351,23 @@ BeginPanelJSON
                 "MaxLength": 4,
                 "ControlType": null
               },
+              "ImageFiles": {
+                "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                "$values": []
+              },
               "DCSBIOSConverters": {
                 "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
                 "$values": []
               },
               "TreatStringAsNumber": false,
-              "RawTextFont": "Hornet IFEI, 24pt",
+              "RawTextFont": "Microsoft Sans Serif, 24pt",
               "RawFontColor": "Lime",
               "RawBackgroundColor": "Black",
               "DecoderSourceType": 0,
               "DecoderOutputType": 0,
               "FaceType": 4,
-              "ConfigurationOK": true,
               "ButtonTextTemplate": "{dcsbios}",
-              "TextFont": "Hornet IFEI, 24pt",
+              "TextFont": "Microsoft Sans Serif, 24pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
@@ -4256,6 +4380,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 7,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4318,18 +4445,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_OS4",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Option Select Pushbutton 4",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 7,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4392,12 +4522,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_OS4",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Option Select Pushbutton 4",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -4406,6 +4536,7 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face DCS-BIOS Decoder UFC_OPTION_DISPLAY_5 ",
             "StreamDeckButtonName": 8,
             "Face": {
               "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
@@ -4424,20 +4555,23 @@ BeginPanelJSON
                 "MaxLength": 4,
                 "ControlType": null
               },
+              "ImageFiles": {
+                "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                "$values": []
+              },
               "DCSBIOSConverters": {
                 "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
                 "$values": []
               },
               "TreatStringAsNumber": false,
-              "RawTextFont": "Hornet IFEI, 24pt",
+              "RawTextFont": "Microsoft Sans Serif, 24pt",
               "RawFontColor": "Lime",
               "RawBackgroundColor": "Black",
               "DecoderSourceType": 0,
               "DecoderOutputType": 0,
               "FaceType": 4,
-              "ConfigurationOK": true,
               "ButtonTextTemplate": "{dcsbios}",
-              "TextFont": "Hornet IFEI, 24pt",
+              "TextFont": "Microsoft Sans Serif, 24pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
@@ -4450,6 +4584,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 8,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4512,18 +4649,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_OS5",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Option Select Pushbutton 5",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 8,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4586,12 +4726,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_OS5",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "Option Select Pushbutton 5",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -4600,6 +4740,7 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face DCS-BIOS Decoder COMM1_CHANNEL_NUMERIC ",
             "StreamDeckButtonName": 25,
             "Face": {
               "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
@@ -4618,6 +4759,10 @@ BeginPanelJSON
                 "MaxLength": 0,
                 "ControlType": null
               },
+              "ImageFiles": {
+                "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                "$values": []
+              },
               "DCSBIOSConverters": {
                 "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
                 "$values": [
@@ -4626,9 +4771,8 @@ BeginPanelJSON
                     "FaceTypeText": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
                       "FaceType": 1,
-                      "ConfigurationOK": true,
                       "ButtonTextTemplate": "G",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
@@ -4638,7 +4782,6 @@ BeginPanelJSON
                     "FaceTypeImage": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
                       "FaceType": 2,
-                      "ConfigurationOK": false,
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
                       "BackgroundColor": "White",
@@ -4651,7 +4794,6 @@ BeginPanelJSON
                       "$type": "NonVisuals.StreamDeck.FaceTypeDCSBIOSOverlay, NonVisuals",
                       "FaceType": 8,
                       "BackgroundBitmapPath": "",
-                      "ConfigurationOK": false,
                       "ButtonTextTemplate": "",
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
@@ -4673,9 +4815,8 @@ BeginPanelJSON
                     "FaceTypeText": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
                       "FaceType": 1,
-                      "ConfigurationOK": true,
                       "ButtonTextTemplate": "{dcsbios}",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
@@ -4685,7 +4826,6 @@ BeginPanelJSON
                     "FaceTypeImage": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
                       "FaceType": 2,
-                      "ConfigurationOK": false,
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
                       "BackgroundColor": "White",
@@ -4698,7 +4838,6 @@ BeginPanelJSON
                       "$type": "NonVisuals.StreamDeck.FaceTypeDCSBIOSOverlay, NonVisuals",
                       "FaceType": 8,
                       "BackgroundBitmapPath": "",
-                      "ConfigurationOK": false,
                       "ButtonTextTemplate": "",
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
@@ -4720,9 +4859,8 @@ BeginPanelJSON
                     "FaceTypeText": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
                       "FaceType": 1,
-                      "ConfigurationOK": true,
                       "ButtonTextTemplate": "M",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
@@ -4732,7 +4870,6 @@ BeginPanelJSON
                     "FaceTypeImage": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
                       "FaceType": 2,
-                      "ConfigurationOK": false,
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
                       "BackgroundColor": "White",
@@ -4745,7 +4882,6 @@ BeginPanelJSON
                       "$type": "NonVisuals.StreamDeck.FaceTypeDCSBIOSOverlay, NonVisuals",
                       "FaceType": 8,
                       "BackgroundBitmapPath": "",
-                      "ConfigurationOK": false,
                       "ButtonTextTemplate": "",
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
@@ -4767,9 +4903,8 @@ BeginPanelJSON
                     "FaceTypeText": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
                       "FaceType": 1,
-                      "ConfigurationOK": true,
                       "ButtonTextTemplate": "C",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
@@ -4779,7 +4914,6 @@ BeginPanelJSON
                     "FaceTypeImage": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
                       "FaceType": 2,
-                      "ConfigurationOK": false,
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
                       "BackgroundColor": "White",
@@ -4792,7 +4926,6 @@ BeginPanelJSON
                       "$type": "NonVisuals.StreamDeck.FaceTypeDCSBIOSOverlay, NonVisuals",
                       "FaceType": 8,
                       "BackgroundBitmapPath": "",
-                      "ConfigurationOK": false,
                       "ButtonTextTemplate": "",
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
@@ -4814,9 +4947,8 @@ BeginPanelJSON
                     "FaceTypeText": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
                       "FaceType": 1,
-                      "ConfigurationOK": true,
                       "ButtonTextTemplate": "S",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
@@ -4826,8 +4958,7 @@ BeginPanelJSON
                     "FaceTypeImage": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
                       "FaceType": 2,
-                      "ConfigurationOK": false,
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Black",
                       "BackgroundColor": "Black",
                       "ImageFile": "",
@@ -4839,9 +4970,8 @@ BeginPanelJSON
                       "$type": "NonVisuals.StreamDeck.FaceTypeDCSBIOSOverlay, NonVisuals",
                       "FaceType": 8,
                       "BackgroundBitmapPath": "",
-                      "ConfigurationOK": false,
                       "ButtonTextTemplate": "",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Black",
                       "BackgroundColor": "Black",
                       "UintDcsBiosValue": 0,
@@ -4859,18 +4989,17 @@ BeginPanelJSON
                 ]
               },
               "TreatStringAsNumber": false,
-              "RawTextFont": "Hornet IFEI, 35.9999962pt",
+              "RawTextFont": "Microsoft Sans Serif, 35.9999962pt",
               "RawFontColor": "Lime",
               "RawBackgroundColor": "Black",
               "DecoderSourceType": 1,
               "DecoderOutputType": 1,
               "FaceType": 4,
-              "ConfigurationOK": true,
               "ButtonTextTemplate": "{dcsbios}",
-              "TextFont": "Hornet IFEI, 35.9999962pt",
+              "TextFont": "Microsoft Sans Serif, 35.9999962pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
-              "UintDcsBiosValue": 2,
+              "UintDcsBiosValue": 1,
               "StringDcsBiosValue": "",
               "StreamDeckButtonName": 25,
               "OffsetX": 6,
@@ -4880,6 +5009,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 25,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -4942,18 +5074,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_COMM1_PULL",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "COMM 1 Channel Selector Knob Pull",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 25,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -5016,12 +5151,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_COMM1_PULL",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "COMM 1 Channel Selector Knob Pull",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -5030,6 +5165,7 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "ActionPress : DCS-BIOS ActionRelease : DCS-BIOS Face DCS-BIOS Decoder COMM2_CHANNEL_NUMERIC ",
             "StreamDeckButtonName": 32,
             "Face": {
               "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
@@ -5048,6 +5184,10 @@ BeginPanelJSON
                 "MaxLength": 0,
                 "ControlType": null
               },
+              "ImageFiles": {
+                "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                "$values": []
+              },
               "DCSBIOSConverters": {
                 "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
                 "$values": [
@@ -5056,9 +5196,8 @@ BeginPanelJSON
                     "FaceTypeText": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
                       "FaceType": 1,
-                      "ConfigurationOK": true,
                       "ButtonTextTemplate": "G",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
@@ -5068,7 +5207,6 @@ BeginPanelJSON
                     "FaceTypeImage": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
                       "FaceType": 2,
-                      "ConfigurationOK": false,
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
                       "BackgroundColor": "White",
@@ -5081,7 +5219,6 @@ BeginPanelJSON
                       "$type": "NonVisuals.StreamDeck.FaceTypeDCSBIOSOverlay, NonVisuals",
                       "FaceType": 8,
                       "BackgroundBitmapPath": "",
-                      "ConfigurationOK": false,
                       "ButtonTextTemplate": "",
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
@@ -5103,9 +5240,8 @@ BeginPanelJSON
                     "FaceTypeText": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
                       "FaceType": 1,
-                      "ConfigurationOK": true,
                       "ButtonTextTemplate": "{dcsbios}",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
@@ -5115,7 +5251,6 @@ BeginPanelJSON
                     "FaceTypeImage": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
                       "FaceType": 2,
-                      "ConfigurationOK": false,
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
                       "BackgroundColor": "White",
@@ -5128,7 +5263,6 @@ BeginPanelJSON
                       "$type": "NonVisuals.StreamDeck.FaceTypeDCSBIOSOverlay, NonVisuals",
                       "FaceType": 8,
                       "BackgroundBitmapPath": "",
-                      "ConfigurationOK": false,
                       "ButtonTextTemplate": "",
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
@@ -5150,9 +5284,8 @@ BeginPanelJSON
                     "FaceTypeText": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
                       "FaceType": 1,
-                      "ConfigurationOK": true,
                       "ButtonTextTemplate": "M",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
@@ -5162,7 +5295,6 @@ BeginPanelJSON
                     "FaceTypeImage": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
                       "FaceType": 2,
-                      "ConfigurationOK": false,
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
                       "BackgroundColor": "White",
@@ -5175,7 +5307,6 @@ BeginPanelJSON
                       "$type": "NonVisuals.StreamDeck.FaceTypeDCSBIOSOverlay, NonVisuals",
                       "FaceType": 8,
                       "BackgroundBitmapPath": "",
-                      "ConfigurationOK": false,
                       "ButtonTextTemplate": "",
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
@@ -5197,9 +5328,8 @@ BeginPanelJSON
                     "FaceTypeText": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
                       "FaceType": 1,
-                      "ConfigurationOK": true,
                       "ButtonTextTemplate": "C",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
@@ -5209,7 +5339,6 @@ BeginPanelJSON
                     "FaceTypeImage": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
                       "FaceType": 2,
-                      "ConfigurationOK": false,
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
                       "BackgroundColor": "White",
@@ -5222,7 +5351,6 @@ BeginPanelJSON
                       "$type": "NonVisuals.StreamDeck.FaceTypeDCSBIOSOverlay, NonVisuals",
                       "FaceType": 8,
                       "BackgroundBitmapPath": "",
-                      "ConfigurationOK": false,
                       "ButtonTextTemplate": "",
                       "TextFont": "Consolas, 12pt",
                       "FontColor": "Black",
@@ -5244,9 +5372,8 @@ BeginPanelJSON
                     "FaceTypeText": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeText, NonVisuals",
                       "FaceType": 1,
-                      "ConfigurationOK": true,
                       "ButtonTextTemplate": "S",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Lime",
                       "BackgroundColor": "Black",
                       "StreamDeckButtonName": 0,
@@ -5256,8 +5383,7 @@ BeginPanelJSON
                     "FaceTypeImage": {
                       "$type": "NonVisuals.StreamDeck.FaceTypeImage, NonVisuals",
                       "FaceType": 2,
-                      "ConfigurationOK": false,
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Black",
                       "BackgroundColor": "Black",
                       "ImageFile": "",
@@ -5269,9 +5395,8 @@ BeginPanelJSON
                       "$type": "NonVisuals.StreamDeck.FaceTypeDCSBIOSOverlay, NonVisuals",
                       "FaceType": 8,
                       "BackgroundBitmapPath": "",
-                      "ConfigurationOK": false,
                       "ButtonTextTemplate": "",
-                      "TextFont": "Hornet IFEI, 35.9999962pt",
+                      "TextFont": "Microsoft Sans Serif, 35.9999962pt",
                       "FontColor": "Black",
                       "BackgroundColor": "Black",
                       "UintDcsBiosValue": 0,
@@ -5289,15 +5414,14 @@ BeginPanelJSON
                 ]
               },
               "TreatStringAsNumber": false,
-              "RawTextFont": "Hornet IFEI, 35.9999962pt",
+              "RawTextFont": "Microsoft Sans Serif, 35.9999962pt",
               "RawFontColor": "Lime",
               "RawBackgroundColor": "Black",
               "DecoderSourceType": 1,
               "DecoderOutputType": 1,
               "FaceType": 4,
-              "ConfigurationOK": true,
               "ButtonTextTemplate": "{dcsbios}",
-              "TextFont": "Hornet IFEI, 35.9999962pt",
+              "TextFont": "Microsoft Sans Serif, 35.9999962pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 1,
@@ -5310,6 +5434,9 @@ BeginPanelJSON
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 32,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": true,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -5372,18 +5499,21 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_COMM2_PULL",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "COMM 2 Channel Selector Knob Pull",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": true,
               "IsSequenced": false
             },
             "ActionForRelease": {
               "$type": "NonVisuals.StreamDeck.ActionTypeDCSBIOS, NonVisuals",
               "ActionType": 2,
               "StreamDeckButtonName": 32,
+              "SoundFile": null,
+              "Volume": 0.0,
+              "Delay": 0,
               "WhenTurnedOn": false,
               "Description": "DCS-BIOS",
               "DCSBIOSInputs": {
@@ -5446,12 +5576,12 @@ BeginPanelJSON
                     },
                     "ControlId": "UFC_COMM2_PULL",
                     "Delay": 0,
-                    "Debug": false,
                     "ControlDescription": "COMM 2 Channel Selector Knob Pull",
                     "ControlType": "push_button"
                   }
                 ]
               },
+              "WhenOnTurnedOn": false,
               "IsSequenced": false
             },
             "HasConfig": true,
@@ -5460,6 +5590,7 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "Face DCS-BIOS Decoder UFC_SCRATCHPAD_STRING_2_DISPLAY ",
             "StreamDeckButtonName": 2,
             "Face": {
               "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
@@ -5478,20 +5609,23 @@ BeginPanelJSON
                 "MaxLength": 2,
                 "ControlType": null
               },
+              "ImageFiles": {
+                "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                "$values": []
+              },
               "DCSBIOSConverters": {
                 "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
                 "$values": []
               },
               "TreatStringAsNumber": false,
-              "RawTextFont": "Hornet IFEI, 35.9999962pt",
+              "RawTextFont": "Microsoft Sans Serif, 35.9999962pt",
               "RawFontColor": "Lime",
               "RawBackgroundColor": "Black",
               "DecoderSourceType": 0,
               "DecoderOutputType": 0,
               "FaceType": 4,
-              "ConfigurationOK": true,
               "ButtonTextTemplate": "{dcsbios}",
-              "TextFont": "Hornet IFEI, 35.9999962pt",
+              "TextFont": "Microsoft Sans Serif, 35.9999962pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
@@ -5508,6 +5642,7 @@ BeginPanelJSON
           },
           {
             "$type": "NonVisuals.StreamDeck.StreamDeckButton, NonVisuals",
+            "Description": "Face DCS-BIOS Decoder UFC_SCRATCHPAD_NUMBER_DISPLAY ",
             "StreamDeckButtonName": 3,
             "Face": {
               "$type": "NonVisuals.StreamDeck.DCSBIOSDecoder, NonVisuals",
@@ -5526,20 +5661,23 @@ BeginPanelJSON
                 "MaxLength": 8,
                 "ControlType": null
               },
+              "ImageFiles": {
+                "$type": "System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib",
+                "$values": []
+              },
               "DCSBIOSConverters": {
                 "$type": "System.Collections.Generic.List`1[[NonVisuals.StreamDeck.DCSBIOSConverter, NonVisuals]], mscorlib",
                 "$values": []
               },
               "TreatStringAsNumber": false,
-              "RawTextFont": "Hornet IFEI, 14.2499981pt",
+              "RawTextFont": "Microsoft Sans Serif, 14.2499981pt",
               "RawFontColor": "Lime",
               "RawBackgroundColor": "Black",
               "DecoderSourceType": 0,
               "DecoderOutputType": 0,
               "FaceType": 4,
-              "ConfigurationOK": true,
               "ButtonTextTemplate": "{dcsbios}",
-              "TextFont": "Hornet IFEI, 14.2499981pt",
+              "TextFont": "Microsoft Sans Serif, 14.2499981pt",
               "FontColor": "Lime",
               "BackgroundColor": "Black",
               "UintDcsBiosValue": 4294967295,
@@ -5560,6 +5698,7 @@ BeginPanelJSON
   ]
 }
 EndPanelJSON
+
 
 
 
@@ -5740,4 +5879,3 @@ EndPanelJSON
 #	PA1
 #	OEM_CLEAR
 #	VK_NULL
-
